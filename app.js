@@ -29,7 +29,7 @@ const port = process.env.PORT || 3500;
 
 const start = async () => {
   try {
-    await connectDB(process.env.MANGO_URI)
+    await connectDB(process.env.MANGO_URL)
     app.listen(port, () =>
       console.log(`Server is listening on port ${port}...`)
     );
