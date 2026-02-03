@@ -27,7 +27,7 @@ const errorHandlerMiddleware = (err, req, res, next) => {
 
     // Mangoose Cast Error
   if(err.name === 'CastError'){
-    customError.mag = `No Item found with id: ${err.value}`,
+    customError.msg = `No Item found with id: ${err.value}`,
     customError.statusCode = 404
   }
 
