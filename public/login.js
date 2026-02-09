@@ -38,7 +38,7 @@ export const handleLogin = () => {
 
         const data = await response.json()
         if(response.status === 200){
-            message.textContent = `Logon Successful. Welcome ${data.user.name}`
+            message.innerHTML = `Logon Successful. Welcome <strong>${data.user.name}</strong>`
             setToken(data.token)
 
             email.value = ''
@@ -66,5 +66,6 @@ export const handleLogin = () => {
 export const showLogin = () => {
   email.value = null;
   password.value = null;
+   message.textContent = 'Please Login'
   setDiv(loginDiv);
 };

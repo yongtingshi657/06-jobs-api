@@ -47,7 +47,7 @@ export const handleRegister = () => {
 
                 const data = await response.json()
                 if(response.status === 201){
-                    message.textContent = `Registration successful. Welcome ${data.user.name}`;
+                    message.innerHTML = `Registration successful. Welcome <strong>${data.user.name}</strong>`;
                     setToken(data.token)
 
                     name.value =''
@@ -82,5 +82,6 @@ export const showRegister = () => {
   email1.value = null;
   password1.value = null;
   password2.value = null;
+  message.textContent = 'Please Register'
   setDiv(registerDiv);
 };
