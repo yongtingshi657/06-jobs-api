@@ -84,7 +84,7 @@ export const showJobs = async () => {
             message.textContent = data.msg
         }
     } catch (error) {
-        console.log(err);
+        console.log(error);
         message.textContent = "A communication error occurred.";
     }
     enableInput(true)
